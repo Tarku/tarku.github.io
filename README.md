@@ -7,4 +7,4 @@ This is my personal website where I will post things about programming, conlangi
   * Yet another semitic inspired conlang, but with way more sense in it, experience with conlanging and sense of aesthetic, [Mowyāwan](https://tarku.github.io/conlangs/mowyawan/index) (Coming Soon too!)
 
 * Programming
-  * My [Terraria Item Creator], written in HTML and JS.
+  * My [Terraria Item Creator](https://tarku.github.io/programming/index.html), written in HTML and JS.
