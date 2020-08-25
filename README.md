@@ -8,4 +8,4 @@ This is my personal website where I will post things about programming, conlangi
 
 * Programming
   * My [Terraria Item Creator](https://tarku.github.io/programming/itemcreator/index.html), written in HTML and JS.
-  * My [Space Shooter Game](https://itch.io/embed-upload/2643177?color=333333), made with Unity.
+  * [PlanetNaka](https://tarku.github.io/programming/planetnaka/index.html), a Space Shooter game made with Unity.
