@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Terraria Item Creator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function genCode(){
+            modName = document.getElementById("modName")
+            itemName = document.getElementById("itemName")
+            itemTooltip = document.getElementById("itemTooltip")
+            itemWidth = document.getElementById("itemWidth")
+            itemHeight = document.getElementById("itemHeight")
+            itemMaxStack = document.getElementById("itemMaxStack")
+            itemValue = document.getElementById("itemValue")
+            consumable = document.getElementById("consumable")
+            lifeRegen = document.getElementById("lifeRegen")
+            manaRegen = document.getElementById("manaRegen")
+
+            header = "using Terraria.ID;\nusing Terraria.ModLoader;\n\n"
+            console.log(modName.value)
+            namespace = `namespace ${modName.value}.Items\n{\n`;
+            class1 = `\tpublic class ${itemName.value} : ModItem\n\t{`;
+            body = `\n\t\tpublic override void SetDefaults()\n\t\t{\n\t\t\titem.width = ${itemWidth.value};\n\t\t\titem.height = ${itemHeight.value};\n\t\t\titem.maxStack = ${itemMaxStack.value};\n\t\t\titem.value = ${itemValue.value};\n\t\t\titem.consumable = ${consumable.checked};\n\t\t}`
+            if(consumable.checked)
+            {
+            	other = `\n\t\tpublic override bool UseItem(Player player)\n\t\t{\n\t\t\tplayer.statLife += ${lifeRegen.value};\n\t\t\tplayer.statMana += ${manaRegen.value};\n\t\t}`
+            } else {
+            	other = ``
+            }
+            end = `\n\t}\n}`
+            return header + namespace + class1 + body + other + end
+        }
+        $(document).ready(function(){
+            $("#codeArea").hide();
+            $("#consumableToggle").hide();
+            $("#consumable").click(function(){
+                $("#consumableToggle").toggle();
+            });
+            $("#generateCode").click(function(){
+                $("#codeArea").show();
+                document.getElementById("codeArea").innerHTML = genCode()
+            });
+        });
+    </script>
+</head>
+<body>
+<h2>Welcome to the Terraria Item Creator!</h2>
+<p>Too lazy or simply unexperienced for doing Terraria mod creation? Use the item creation tool and get your .cs code!</p>
+<hr/>
+<form>
+    <label>Mod Name: <input type="text" placeholder="Insert Mod Name here" id="modName"></label>
+    <hr/>
+    <label>Item Name: <input type="text" placeholder="Insert Item Name" id="itemName"></label>
+    <br/>
+    <label>Item Tooltip: <input type="text" placeholder="Insert Item Tooltip" id="itemTooltip"> [COMING SOON]</label>
+    <hr/>
+    <div>
+        <label>Item Width: <input type="number" id="itemWidth" value=32></label>
+        <label>Item Height: <input type="number" id="itemHeight" value=32></label>
+    </div>
+    <hr/>
+    <label>Item Max Stack: <input type="number" id="itemMaxStack" value=99></label>
+    <br/>
+    <label>Item Value (in copper coins): <input type="number" id="itemValue" value=0></label>
+    <hr/>
+    <label>Consumable?: <input type="checkbox" id="consumable"></label>
+    <ul id="consumableToggle">
+        <li>Life Regen: <input type="number" id="lifeRegen" value=0></li>
+        <li>Mana Regen: <input type="number" id="manaRegen" value=0></li>
+    </ul>
+</form>
+<hr/>
+<button id="generateCode">Generate my Code!</button>
+<textarea id="codeArea" cols=50 rows=50></textarea>
+</body>
+</html>
