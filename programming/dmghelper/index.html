@@ -11,7 +11,10 @@ var output = document.getElementById("res");
 output.innerHTML = atk.value - def.value / 2; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
+atk.oninput = function() {
+  output.innerHTML = atk.value - def.value / 2;
+}
+  def.oninput = function() {
   output.innerHTML = atk.value - def.value / 2;
 }
 </script>
