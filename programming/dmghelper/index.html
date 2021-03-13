@@ -5,6 +5,12 @@
 </div>
 <p>The final damage is <span id="res"/></p>
 <script>
+  
+  
+ function clamp(min, max) {
+  return Math.min(Math.max(this, min), max);
+};
+  
 var atk = document.getElementById("atk");
 var def = document.getElementById("def");
 var a = document.getElementById("a");
@@ -16,11 +22,11 @@ b.innerHTML = def.value;
 
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("change", function(e) {
-  output.innerHTML = Math.clamp(atk.value - def.value / 2, 1, 2000);
+  output.innerHTML = clamp(atk.value - def.value / 2, 1, 2000);
   a.innerHTML = atk.value;
 });
 def.addEventListener("change", function(e) {
-  output.innerHTML = Math.clamp(atk.value - def.value / 2, 1, 2000);
+  output.innerHTML = clamp(atk.value - def.value / 2, 1, 2000);
   b.innerHTML = def.value;
 });
 </script>
