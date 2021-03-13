@@ -30,7 +30,7 @@ atk.addEventListener("click", function(e) {
 def.addEventListener("click", function(e) {
   var dmg = (atk.value - def.value / 2);
   if(dmg<=1) dmg = 1;
-  output.innerHTML = Math.abs(atk.value - def.value / 2);
+  output.innerHTML = dmg;
   b.innerHTML = def.value;
 });
 </script>
