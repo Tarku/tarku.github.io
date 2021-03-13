@@ -6,7 +6,7 @@
 <script>
   
 function calculateDamage(atk, def) {
-  var dmg = (atk.value - def.value / 2);
+  var dmg = (atk - def / 2);
   if(dmg<=1) dmg = 1;
   return dmg;
 }
@@ -14,13 +14,13 @@ function calculateDamage(atk, def) {
 var atk = document.getElementById("atk");
 var def = document.getElementById("def");
 var output = document.getElementById("res");
-output.innerHTML = calculateDamage(atk, def); // Display the default slider value
+output.innerHTML = calculateDamage(atk.value, def.value); // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("change", function(e) {
-  output.innerHTML = calculateDamage(atk, def);
+  output.innerHTML = calculateDamage(atk.value, def.value);
 });
 def.addEventListener("change", function(e) {
-  output.innerHTML = calculateDamage(atk, def);
+  output.innerHTML = calculateDamage(atk.value, def.value);
 });
 </script>
