@@ -1,12 +1,15 @@
 <div class="slidecontainer">
   <p>Source's attack damage: <input type="number" value="10" min="1" id="atk"></p>
   <p>Target's defense value: <input type="number" value="10" min="0" id="def"></p>
-  <p>Critical chance: <input type="number" value="0.04" min="0.00" max="1.00" step="0.01" id="def"></p>
+  <p>Critical chance: <input type="number" value="0.04" min="0.00" max="1.00" step="0.01" id="crit"></p>
 </div>
 <p>The final damage is <span id="res"/></p>
 <script>
-  
-function calculateDamage(atk, def) {
+function calculateDamage(atk, def, rand) {
+  if(rand <= crit)
+  {
+    atk *= 2;
+  }
   var dmg = (atk - def / 2);
   if(dmg<=1) dmg = 1;
   return dmg;
@@ -14,14 +17,27 @@ function calculateDamage(atk, def) {
   
 var atk = document.getElementById("atk");
 var def = document.getElementById("def");
+var crit = document.getElementById("crit");
 var output = document.getElementById("res");
 output.innerHTML = calculateDamage(atk.value, def.value); // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("change", function(e) {
-  output.innerHTML = calculateDamage(atk.value, def.value);
+  
+  var rand = Math.random();
+  if(rand <= crit){
+    output.innerHTML = "Crit!" + calculateDamage(atk.value, def.value, rand);
+  } else {
+    output.innerHTML = calculateDamage(atk.value, def.value, rand);
+  }
+  
 });
 def.addEventListener("change", function(e) {
-  output.innerHTML = calculateDamage(atk.value, def.value);
+  var rand = Math.random();
+  if(rand <= crit){
+    output.innerHTML = "Crit!" + calculateDamage(atk.value, def.value, rand);
+  } else {
+    output.innerHTML = calculateDamage(atk.value, def.value, rand);
+  }
 });
 </script>
