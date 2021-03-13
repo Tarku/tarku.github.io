@@ -15,11 +15,11 @@ a.innerHTML = atk.value;
 b.innerHTML = def.value;
 
 // Update the current slider value (each time you drag the slider handle)
-atk.oninput = function() {
+atk.onchange = function() {
   output.innerHTML = Math.clamp(atk.value - def.value / 2, 1, 2000);
   a.innerHTML = atk.value;
 }
-def.oninput = function() {
+def.onchange = function() {
   output.innerHTML = Math.clamp(atk.value - def.value / 2, 1, 2000);
   b.innerHTML = def.value;
 }
