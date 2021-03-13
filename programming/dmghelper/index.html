@@ -15,7 +15,7 @@ function calculateDamage(atk, def) {
 var atk = document.getElementById("atk");
 var def = document.getElementById("def");
 var output = document.getElementById("res");
-output.innerHTML = atk.value - def.value / 2; // Display the default slider value
+output.innerHTML = calculateDamage(atk, def); // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("change", function(e) {
