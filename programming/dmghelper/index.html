@@ -22,10 +22,14 @@ b.innerHTML = def.value;
 
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("click", function(e) {
-  output.innerHTML = Math.abs(atk.value - def.value / 2);
+  var dmg = (atk.value - def.value / 2);
+  if(dmg<=1) dmg = 1;
+  output.innerHTML = dmg;
   a.innerHTML = atk.value;
 });
 def.addEventListener("click", function(e) {
+  var dmg = (atk.value - def.value / 2);
+  if(dmg<=1) dmg = 1;
   output.innerHTML = Math.abs(atk.value - def.value / 2);
   b.innerHTML = def.value;
 });
