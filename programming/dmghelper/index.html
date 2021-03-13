@@ -23,7 +23,7 @@ output.innerHTML = calculateDamage(atk.value, def.value); // Display the default
 var rand = Math.random();
 // Update the current slider value (each time you drag the slider handle)
 atk.addEventListener("change", function(e) {
-  
+  rand = Math.random();
   if(rand <= crit){
     output.innerHTML = "Crit!" + calculateDamage(atk.value, def.value, rand);
   } else {
@@ -32,6 +32,7 @@ atk.addEventListener("change", function(e) {
   
 });
 def.addEventListener("change", function(e) {
+  rand = Math.random();
   if(rand <= crit){
     output.innerHTML = "Crit!" + calculateDamage(atk.value, def.value, rand);
   } else {
