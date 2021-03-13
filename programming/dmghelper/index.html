@@ -1,36 +1,27 @@
 <div class="slidecontainer">
-  <p>Source's attack damage: <input type="number" min="1" id="atk"><span id="a"/></p>
+  <p>Source's attack damage: <input type="number" value="10" min="1" id="atk"></p>
   <br/>
-  <p>Target's defense value: <input type="number" min="1" id="def"><span id="b"/></p>
+  <p>Target's defense value: <input type="number" value="10" min="0" id="def"></p>
 </div>
 <p>The final damage is <span id="res"/></p>
 <script>
   
-  
- function clamp(min, max) {
-  return Math.min(Math.max(this, min), max);
-};
+function calculateDamage(atk, def) {
+  var dmg = (atk.value - def.value / 2);
+  if(dmg<=1) dmg = 1;
+  return dmg;
+}
   
 var atk = document.getElementById("atk");
 var def = document.getElementById("def");
-var a = document.getElementById("a");
-var b = document.getElementById("b");
 var output = document.getElementById("res");
 output.innerHTML = atk.value - def.value / 2; // Display the default slider value
-a.innerHTML = atk.value - 1;
-b.innerHTML = def.value;
 
 // Update the current slider value (each time you drag the slider handle)
-atk.addEventListener("click", function(e) {
-  var dmg = (atk.value - def.value / 2);
-  if(dmg<=1) dmg = 1;
-  output.innerHTML = dmg;
-  a.innerHTML = atk.value;
+atk.addEventListener("change", function(e) {
+  output.innerHTML = calculateDamage(atk.value);
 });
-def.addEventListener("click", function(e) {
-  var dmg = (atk.value - def.value / 2);
-  if(dmg<=1) dmg = 1;
-  output.innerHTML = dmg;
-  b.innerHTML = def.value;
+def.addEventListener("change", function(e) {
+  output.innerHTML = calculateDamage(def.value);
 });
 </script>
