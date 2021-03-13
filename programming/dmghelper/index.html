@@ -21,11 +21,11 @@ a.innerHTML = atk.value - 1;
 b.innerHTML = def.value;
 
 // Update the current slider value (each time you drag the slider handle)
-atk.addEventListener("change", function(e) {
+atk.addEventListener("click", function(e) {
   output.innerHTML = Math.abs(atk.value - def.value / 2);
   a.innerHTML = atk.value;
 });
-def.addEventListener("change", function(e) {
+def.addEventListener("click", function(e) {
   output.innerHTML = Math.abs(atk.value - def.value / 2);
   b.innerHTML = def.value;
 });
