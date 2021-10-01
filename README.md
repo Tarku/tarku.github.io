@@ -11,7 +11,7 @@ This is my personal website where I will post things about programming, conlangi
   * A Finnish and Turkish-inspired conlang spoken in the vast taigas of the Shänland, [Shäny](https://docs.google.com/spreadsheets/d/1uBWOGAw_5EemhI76uhauYyqU4wXzHKZ-zz_TdIUghlU/edit?usp=sharing)
   * Yet another proto-lang and its descendants, spoken in Chashili and on the western coast of the Shänland [Proto-Yaltino-Chashilan, Chashilan and Yaltinan](https://docs.google.com/spreadsheets/d/1KTGMW02pZj9XgGlHjvKEQbWkk5QMPRnV165XpwWWs8U/edit?usp=sharing)
   * A fairly weird language with both vowel and consonant harmony, and spoken in the jungle, [Ydzan](https://docs.google.com/spreadsheets/d/13zUVNPlWZBp0esCEzAzL0VajPakkvBFgLKT3MTFZZKE/edit?usp=sharing)
-  * A conlang with a relatively simple phonology, spoken on the small, fairly subtropical island of Bat Ekanát, alongside with its offspring Nellá, with an orthography inspired by Quenya's, [Nédelat and Nellá]
+  * A conlang with a relatively simple phonology, spoken on the small, fairly subtropical island of Bat Ekanát, alongside with its offspring Nellá, with an orthography inspired by Quenya's, [Nédelat and Nellá](https://docs.google.com/spreadsheets/d/16RijufX0dcQdNoSs--H2JU3SIFk4exEZd4vwJ_5mrno/edit?usp=sharing)
 
 * Programming
   * My [Terraria Item Creator](https://tarku.github.io/programming/itemcreator/index.html), written in HTML and JS.
