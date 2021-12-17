@@ -1,4 +1,4 @@
-# Tarku's personal website 
+# Tark's personal website 
 This is my personal website where I will post things about programming, conlanging, music and maybe many more...
 
 * Conlanging
@@ -17,3 +17,4 @@ This is my personal website where I will post things about programming, conlangi
   * My [Terraria Item Creator](https://tarku.github.io/programming/itemcreator/index.html), written in HTML and JS.
   * [PlanetNaka](https://tarku.github.io/programming/planetnaka/index.html), a Space Shooter game made with Unity.
   * A [verb conjugator for Shalshal](https://tarku.github.io/programming/shalshal-conjugator/index.html), another conlang of mine. 
+  * My [word generator for conlanging purposes](https://tarku.github.io/programming/wordgen/index.html), written in JS.
