@@ -37,7 +37,7 @@
             $("#consumable").click(function(){
                 $("#consumableToggle").toggle();
             });
-            $("#generateCode").click(function(){
+            $(".update-code").change(function(){
                 $("#codeArea").show();
                 document.getElementById("codeArea").innerHTML = genCode()
             });
@@ -49,25 +49,25 @@
 <p>Too lazy or simply unexperienced for doing Terraria mod creation? Use the item creation tool and get your .cs code!</p>
 <hr/>
 <form>
-    <label>Mod Name: <input type="text" placeholder="Insert Mod Name here" id="modName"></label>
+    <label>Mod Name: <input type="text" placeholder="Insert Mod Name here" id="modName" class="update-code"></label>
     <hr/>
-    <label>Item Name: <input type="text" placeholder="Insert Item Name" id="itemName"></label>
+    <label>Item Name: <input type="text" placeholder="Insert Item Name" id="itemName" class="update-code"></label>
     <br/>
     <label>Item Tooltip: <input type="text" placeholder="Insert Item Tooltip" id="itemTooltip"> [COMING SOON]</label>
     <hr/>
     <div>
-        <label>Item Width: <input type="number" id="itemWidth" value=32></label>
-        <label>Item Height: <input type="number" id="itemHeight" value=32></label>
+        <label>Item Width: <input type="number" id="itemWidth" value=32 class="update-code"></label>
+        <label>Item Height: <input type="number" id="itemHeight" value=32 class="update-code"></label>
     </div>
     <hr/>
-    <label>Item Max Stack: <input type="number" id="itemMaxStack" value=99></label>
+    <label>Item Max Stack: <input type="number" id="itemMaxStack" value=99 class="update-code"></label>
     <br/>
-    <label>Item Value (in copper coins): <input type="number" id="itemValue" value=0></label>
+    <label>Item Value (in copper coins): <input type="number" id="itemValue" value=0 class="update-code"></label>
     <hr/>
-    <label>Consumable?: <input type="checkbox" id="consumable"></label>
+    <label>Consumable?: <input type="checkbox" id="consumable" class="update-code"></label>
     <ul id="consumableToggle">
-        <li>Life Regen: <input type="number" id="lifeRegen" value=0></li>
-        <li>Mana Regen: <input type="number" id="manaRegen" value=0></li>
+        <li>Life Regen: <input type="number" id="lifeRegen" value=0 class="update-code"></li>
+        <li>Mana Regen: <input type="number" id="manaRegen" value=0 class="update-code"></li>
     </ul>
 </form>
 <hr/>
