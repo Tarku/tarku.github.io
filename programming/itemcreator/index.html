@@ -17,10 +17,17 @@
             var lifeRegen = $("#lifeRegen")
             var manaRegen = $("#manaRegen")
 
-            header = `using Terraria.ID;
+            header = `
+            using Terraria.ID;
             using Terraria.ModLoader;
-            `
-            namespace = `namespace ${modName.value}.Items\n{\n`;
+            
+            `;
+            namespace = `
+            namespace ${modName.value}.Items
+            {
+            
+            `;
+            
             class1 = `\tpublic class ${itemName.value} : ModItem\n\t{`;
             body = `\n\t\tpublic override void SetDefaults()\n\t\t{\n\t\t\titem.width = ${itemWidth.value};\n\t\t\titem.height = ${itemHeight.value};\n\t\t\titem.maxStack = ${itemMaxStack.value};\n\t\t\titem.value = ${itemValue.value};\n\t\t\titem.consumable = ${consumable.checked};\n\t\t}`
             if(consumable.checked)
