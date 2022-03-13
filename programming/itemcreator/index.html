@@ -5,17 +5,19 @@
     <title>Terraria Item Creator</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+        
+        var modName = $("#modName");
+        var itemName = $("#itemName");
+        var itemTooltip = $("#itemTooltip");
+        var itemWidth = $("#itemWidth");
+        var itemHeight = $("#itemHeight");
+        var itemMaxStack = $("#itemMaxStack")
+        var itemValue = $("#itemValue")
+        var consumable = $("#consumable")
+        var lifeRegen = $("#lifeRegen")
+        var manaRegen = $("#manaRegen")
+        
         function genCode(){
-            modName = document.getElementById("modName")
-            itemName = document.getElementById("itemName")
-            itemTooltip = document.getElementById("itemTooltip")
-            itemWidth = document.getElementById("itemWidth")
-            itemHeight = document.getElementById("itemHeight")
-            itemMaxStack = document.getElementById("itemMaxStack")
-            itemValue = document.getElementById("itemValue")
-            consumable = document.getElementById("consumable")
-            lifeRegen = document.getElementById("lifeRegen")
-            manaRegen = document.getElementById("manaRegen")
 
             header = "using Terraria.ID;\nusing Terraria.ModLoader;\n\n"
             console.log(modName.value)
