@@ -19,8 +19,9 @@
         
         function genCode(){
 
-            header = "using Terraria.ID;\nusing Terraria.ModLoader;\n\n"
-            console.log(modName.value)
+            header = `using Terraria.ID;
+            using Terraria.ModLoader;
+            `
             namespace = `namespace ${modName.value}.Items\n{\n`;
             class1 = `\tpublic class ${itemName.value} : ModItem\n\t{`;
             body = `\n\t\tpublic override void SetDefaults()\n\t\t{\n\t\t\titem.width = ${itemWidth.value};\n\t\t\titem.height = ${itemHeight.value};\n\t\t\titem.maxStack = ${itemMaxStack.value};\n\t\t\titem.value = ${itemValue.value};\n\t\t\titem.consumable = ${consumable.checked};\n\t\t}`
