@@ -20,6 +20,7 @@ header
   /* position: fixed; /* Stay in place */
   /* z-index: 1; /* Stay on top */
   width: 15%;
+  height: 100%;
   background-color: DarkOrange; /* Black*/
   /* overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 5%;
@@ -29,6 +30,7 @@ header
 {
   background-color: #E57200;
   color: 282828;
+  padding: 10px;
 }
 .menu_link:visited
 {
