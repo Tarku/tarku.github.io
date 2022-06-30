@@ -38,11 +38,11 @@
 }
 .holder
 {
-  padding-top: 5%;
   padding-right: 5%;
   background-color: Orange;
 }
 .main_content
 {
+  padding-top: 5%;
   padding-left: 10%;
 }
