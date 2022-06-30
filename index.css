@@ -18,11 +18,15 @@
 {
   width: 100%;
   background-color: DarkOrange;
+  
+  text-align: center;
 }
 .menu
 {
   padding-left: 10%;
   padding-right: 10%;
+  
+  display: inline-block;
 }
 .menu_link
 {
