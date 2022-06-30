@@ -11,12 +11,10 @@ html
 .side_content
 {
   
-  height: 100%; /* 100% Full-height */
-  width: 15%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  /* position: fixed; /* Stay in place */
+  /* z-index: 1; /* Stay on top */
   background-color: DarkOrange; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
+  /* overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20%;
   padding-left: 10%;
 }
