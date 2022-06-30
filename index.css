@@ -1,14 +1,16 @@
+html
+{
+  background-color: White
+}
 .side_content
 {
   background-color: DarkOrange;
-  width: 30%;
+  left: 5%;
+  right: 15%;
 }
 .main_content
 {
-  background-color: White;
-  width: 70%
-}
-header
-{
-  background-color: LightSalmon; 
+  background-color: Orange;
+  left: 20%;
+  right: 95%
 }
