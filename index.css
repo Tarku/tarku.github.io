@@ -12,11 +12,12 @@
   padding-right: 5%;
 
   background-color: DarkOrange;
+
+  text-align: center;
 }
 .div_text_center
 {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  display: inline-block;
 }
 .holder
 {
