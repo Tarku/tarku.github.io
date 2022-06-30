@@ -10,7 +10,6 @@ window.onload = function() {
   let year_difference = current_date.getFullYear() - BIRTH_DATE.getFullYear();
   
   let month_difference = current_date.getMonth() - BIRTH_DATE.getMonth();
-  let day_difference = current_date.getDate() - BIRTH_DATE.getDate();
   
   if (month_difference > 0) {
     age = year_difference;
