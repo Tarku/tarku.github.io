@@ -5,7 +5,9 @@ window.onload = function() {
   let age_span = document.getElementById("age");
   let age = 0;
   
-  let current_date = Date.now();
+  let current_date = new Date();
+  current_date = Date.now();
+  
   let year_difference = BIRTH_DATE.getFullYear() - current_date.getFullYear()
   
   let month_difference = BIRTH_DATE.getMonth() - current_date.getMonth()
