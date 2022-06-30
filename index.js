@@ -6,7 +6,6 @@ window.onload = function() {
   let age = 0;
   
   let current_date = new Date();
-  current_date = Date.now();
   
   let year_difference = BIRTH_DATE.getFullYear() - current_date.getFullYear()
   
