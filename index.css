@@ -30,6 +30,11 @@ header
   background-color: #E57200;
   color: 282828;
 }
+.menu_link:visited
+{
+  background-color: #E57200;
+  color: 282828;
+}
 .main_content
 {
   padding-top: 5%;
