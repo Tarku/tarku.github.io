@@ -1,12 +1,16 @@
-html
+.content
 {
   background-color: LemonChiffon
 }
-header
+.header
 {
   padding-top: 5%;
   padding-left: 5%;
   background-color: DarkOrange;
+}
+.div_text_center
+{
+  width: 50%;
 }
 .holder
 {
