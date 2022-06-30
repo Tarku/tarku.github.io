@@ -2,6 +2,12 @@ html
 {
   background-color: LemonChiffon
 }
+header
+{
+  padding-top: 5%;
+  padding-left: 5%;
+  background-color: DarkOrange;
+}
 .holder
 {
   padding-left: 5%;
@@ -21,6 +27,7 @@ html
 .menu_link
 {
   background-color: #E57200;
+  color: 282828;
 }
 .main_content
 {
