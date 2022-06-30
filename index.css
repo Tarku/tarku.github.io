@@ -27,19 +27,23 @@
   
   /* position: fixed; /* Stay in place */
   /* z-index: 1; /* Stay on top */
-  height: 10%;
+  height: 7.5%;
   width: 100%;
   background-color: DarkOrange; /* Black*/
   /* overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 5%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 5%;
+}
+.menu
+{
+  padding: 10%;
 }
 .menu_link
 {
   background-color: #E57200;
   color: 282828;
-  padding: 10px;
 }
 .menu_link:visited
 {
