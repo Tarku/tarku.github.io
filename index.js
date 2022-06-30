@@ -12,7 +12,7 @@ window.onload = function() {
   let month_difference = current_date.getMonth() - BIRTH_DATE.getMonth();
   let day_difference = current_date.getDate() - BIRTH_DATE.getDate();
   
-  if (month_difference < 0) {
+  if (month_difference > 0) {
     age = year_difference;
   } else {
     age = year_difference - 1;
