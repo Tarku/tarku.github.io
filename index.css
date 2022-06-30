@@ -1,10 +1,12 @@
 .side_content
 {
   background-color: DarkOrange;
+  width: 30%;
 }
 .main_content
 {
   background-color: White;
+  width: 70%
 }
 header
 {
