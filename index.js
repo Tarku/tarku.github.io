@@ -7,10 +7,10 @@ window.onload = function() {
   
   let current_date = new Date();
   
-  let year_difference = BIRTH_DATE.getFullYear() - current_date.getFullYear()
+  let year_difference = current_date.getFullYear() - BIRTH_DATE.getFullYear();
   
-  let month_difference = BIRTH_DATE.getMonth() - current_date.getMonth()
-  let day_difference = BIRTH_DATE.getDate() - current_date.getDate()
+  let month_difference = current_date.getMonth() - BIRTH_DATE.getMonth();
+  let day_difference = current_date.getDate() - BIRTH_DATE.getDate();
   
   if (month_difference < 0) {
     if (day_difference < 0) {
