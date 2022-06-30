@@ -14,16 +14,11 @@
 {
   display: inline-block;
 }
-.holder
-{
-  padding-top: 5%;
-  background-color: Orange;
-}
 .side_content
 {
   width: 100%;
   background-color: DarkOrange;
-  
+
 }
 .menu
 {
@@ -41,7 +36,13 @@
   color: #282828;
   font-style: normal;
 }
+.holder
+{
+  padding-top: 5%;
+  padding-right: 5%;
+  background-color: Orange;
+}
 .main_content
 {
-  padding-right: 5%;
+  padding-left: 10%;
 }
