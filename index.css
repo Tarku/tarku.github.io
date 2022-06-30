@@ -1,8 +1,12 @@
 .side_content
 {
-  background-color: orange;
+  background-color: DarkOrange;
 }
 .main_content
 {
-  background-color: white;
+  background-color: White;
+}
+h2
+{
+  background-color: LightSalmon; 
 }
