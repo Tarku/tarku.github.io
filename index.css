@@ -18,7 +18,6 @@
 {
   width: 100%;
   background-color: DarkOrange;
-
 }
 .menu
 {
@@ -38,11 +37,10 @@
 }
 .holder
 {
-  padding-right: 5%;
+  width: 100%;
   background-color: Orange;
 }
 .main_content
 {
-  padding-top: 5%;
   padding-left: 10%;
 }
