@@ -1,4 +1,4 @@
-const BIRTH_DATE = Date.parse('24 Sep 2005 15:21:00 GMT');
+const BIRTH_DATE = new Date('Sept 24, 05 17:20:18');
 
 window.onload = function() {
   
@@ -6,10 +6,10 @@ window.onload = function() {
   let age = 0;
   
   let current_date = Date.now();
-  let year_difference = BIRTH_DATE.getUTCFullYear() - current_date.getFullYear()
+  let year_difference = BIRTH_DATE.getFullYear() - current_date.getFullYear()
   
-  let month_difference = BIRTH_DATE.getUTCMonth() - current_date.getMonth()
-  let day_difference = BIRTH_DATE.getUTCDate() - current_date.getDate()
+  let month_difference = BIRTH_DATE.getMonth() - current_date.getMonth()
+  let day_difference = BIRTH_DATE.getDate() - current_date.getDate()
   
   if (month_difference < 0) {
     if (day_difference < 0) {
