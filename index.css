@@ -25,7 +25,7 @@
 {
   padding-left: 10%;
   padding-right: 10%;
-  
+
   display: inline-block;
 }
 .menu_link
@@ -47,6 +47,8 @@
 }
 .main_content
 {
+  padding-top: 5%;
+
   padding-left: 10%;
   padding-right: 10%;
 }
