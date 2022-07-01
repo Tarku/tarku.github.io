@@ -40,6 +40,18 @@
   color: #282828;
   text-decoration: none;
 }
+.other_link
+{
+  color: darkolivegreen;
+  text-decoration: dotted;
+  font-style: oblique 5deg;
+}
+.other_link:visited
+{
+  color: darkolivegreen;
+  text-decoration: dotted;
+  font-style: oblique 5deg;
+}
 .holder
 {
   width: 100%;
