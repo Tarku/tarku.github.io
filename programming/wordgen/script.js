@@ -39,10 +39,10 @@ function generateSyllables()
 
 function main()
 {   
-    var syllableStructure = document.getElementById("sylstruct").value;
-    var definitions = document.getElementById("syldef").value;
-    var result = document.getElementById("result");
-    var itergen = document.getElementById("itergen").value;
+    var syllableStructure = document.getElementById("syllable_structure").value;
+    var definitions = document.getElementById("syllable_definitions").value;
+    var result = document.getElementById("wordgen_result");
+    var iterationNumber = document.getElementById("iteration_number").value;
 
     result.innerHTML = "";
     
@@ -56,7 +56,7 @@ function main()
         parseAbbrDefinitions(splitDefinitions[defLine]);
     }
 
-    for (var i = 0; i < itergen; i++)
+    for (var i = 0; i < iterationNumber; i++)
     {
         result.innerHTML += generateSyllables() + "\n";
     }
