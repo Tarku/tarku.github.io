@@ -1,12 +1,18 @@
+body
+{
+  background-color: rgb(73, 64, 104);
+  color:#c8c7c7;
+}
+
 .content
 {
-  background-color: LemonChiffon
+  background-color: rgb(73, 64, 104)
 }
 .header
 {
   width: 100%;
 
-  background-color: DarkOrange;
+  background-color: rgb(58, 7, 93);
 
   text-align: center;
 }
@@ -17,7 +23,7 @@
 .side_content
 {
   width: 100%;
-  background-color: DarkOrange;
+  background-color: rgb(58, 7, 93);
   
   text-align: center;
 }
@@ -28,34 +34,40 @@
 
   display: inline-block;
 }
+hr
+{
+  background-color: #381441;
+}
 .menu_link
 {
-  background-color: #E57200;
-  color: #282828;
+  background-color: rgb(25, 10, 60);
+  border-radius: 15%;
+  color: rgb(101, 89, 195);
   text-decoration: none;
 }
 .menu_link:visited
 {
-  background-color: #E57200;
-  color: #282828;
+  background-color: rgb(25, 10, 60);
+  color: rgb(101, 89, 195);
+  font-size: large;
   text-decoration: none;
 }
 .other_link
 {
-  color: darkolivegreen;
+  color: rgb(101, 89, 195);
   text-decoration: dotted;
-  font-style: oblique 5deg;
+  font-style: oblique 2deg;
 }
 .other_link:visited
 {
-  color: darkolivegreen;
+  color: rgb(101, 89, 195);
   text-decoration: dotted;
-  font-style: oblique 5deg;
+  font-style: oblique 2deg;
 }
 .holder
 {
   width: 100%;
-  background-color: Orange;
+  background-color: rgb(58, 7, 93);
 }
 .main_content
 {
