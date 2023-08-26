@@ -6,6 +6,7 @@
 
         <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
         <link rel="stylesheet" href="../../global.css">
+        <link rel="stylesheet" href="index.css">
         
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8526369948955908"
      crossorigin="anonymous"></script>
@@ -32,31 +33,52 @@
                     <td><a class="menu_link" href="../../glossary.html">Glossary</a></td>
                     <td><a class="menu_link" href="../../aboutme.html">About me</a></td>
                 </table>
+                <hr>
             </div>
 
             <div class="holder">
                 <div class="main_content">
-                    <h3>Root generator</h3>
+                    <h2 style="text-align: center;">Root generator</h3>
                     <hr/>
 
-                    <label for="syllable_structure">
-                        Syllable structure (ex: "<label style="font-style: italic;">CVC</label>")
-                    </label>
-
-                    <textarea name="syllable_structure" type="text" id="syllable_structure" placeholder="CV;CVC;CVn;CRVF"></textarea>
+                    <table class="generator" style="width:100%;">
+                        <td style="text-align: center;">
+                            <label for="syllable_structure">
+                                Syllable structure:
+                             </label>
+                             <br>
+                             <br>
+                            <textarea
+                                name="syllable_structure"
+                                type="text"
+                                id="syllable_structure"
+                                placeholder="CV&#10CVC&#10CVn&#10CRVF"
+                                class="text_input"></textarea>
                     
-                    <p>(Please separate each syllable definition by a semicolon)</p>
-                    
-                    <br>
-
-                    <label for="syllable_definitions">Definitions: </label>
-                    <textarea name="syllable_definitions" id="syllable_definitions" placeholder="C=p t k m n s w l j&#10V=a e i o u"></textarea>
-
+                            <div style="font-size: 11px; font-style: italic;">(Please separate each syllable definition by a newline)</p>
+                        </td>
+                        <td style="text-align: center;">
+                            <label for="syllable_definitions">Definitions: </label>
+                            <br>
+                            <br>
+                            <textarea
+                                name="syllable_definitions"
+                                id="syllable_definitions"
+                                placeholder="C=p t k m n s w l j&#10V=a e i o u"
+                                class="text_input"></textarea>
+                        </td>
+                    </table>
                     <hr>
 
-                    <div class="wordgen_button_div">
+                    <div class="wordgen_button_div" style="text-align: center;">
+                        <br>
                         <label for="iteration_number">How many words to generate?</label>
                         <input type="number" id="iteration_number" min=1 max=50000 value=10>
+                        <br>
+                        <br>
+                        <label for="output_newline">Add newline?</label>
+                        <input type="checkbox" id="output_newline"/>
+                        <br>
                         <br>
                         <button onclick="main()">Generate</button>
                     </div>
@@ -64,7 +86,7 @@
                     <hr>
 
                     <div class="wordgen_result_div">
-                        <textarea name="wordgen_result" id="wordgen_result" placeholder="Results here..." readonly></textarea>
+                        <textarea name="wordgen_result" id="wordgen_result" placeholder="Results here..." readonly style="width: 100%; height: 100px;"></textarea>
                     </div>
                 </div>
             </div>

@@ -1,17 +1,5 @@
-.content {
-    margin: auto;
-    width: 960px;
-    background-color: slateblue;
-}
-
-.maindiv {
-    background-color: white;
-}
-
-.buttondiv {
-    background-color: lavender;
-}
-
-.resultdiv {
-    background-color: white;
+.text_input
+{
+    width: 90%;
+    height: 80px;
 }

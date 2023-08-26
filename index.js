@@ -1,21 +1,17 @@
-const BIRTH_DATE = new Date('Sept 24, 05 17:20:18');
+const MENU_INNER_HTML = `
+<table class='menu'>
+  <td><a class='menu_link' href='/index.html'>Homepage</a></td>
+  <td><a class='menu_link' href='/glossary.html'>Glossary</a></td>
+  <td><a class='menu_link' href='/aboutme.html'>About me</a></td>
+  <td><a class='menu_link' href='/contactme.html'>Contact me</a></td>
+</table>
+<hr>`;
 
-window.onload = function() {
-  
-  let age_span = document.getElementById("age");
-  let age = 0;
-  
-  let current_date = new Date();
-  
-  let year_difference = current_date.getFullYear() - BIRTH_DATE.getFullYear();
-  
-  let month_difference = current_date.getMonth() - BIRTH_DATE.getMonth();
-  
-  if (month_difference > 0) {
-    age = year_difference;
-  } else {
-    age = year_difference - 1;
+window.onload = function(ev) {
+  let menuDivs = document.querySelectorAll("#menu_holder");
+
+  for (let menuDiv of menuDivs)
+  {
+    menuDiv.innerHTML = MENU_INNER_HTML;
   }
-  
-  age_span.innerHTML = age
 };

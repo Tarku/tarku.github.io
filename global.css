@@ -1,78 +1,71 @@
+:root
+{
+  --backgroundColor: rgb(73, 64, 104);
+  --alternativeBackgroundColor: rgb(58, 7, 93);
+  --menuBackgroundColor: rgb(28, 14, 60);
+  --textColor: rgb(169, 171, 187);
+} 
+
 body
 {
-  background-color: rgb(73, 64, 104);
-  color:#c8c7c7;
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
 }
 
-.content
-{
-  background-color: rgb(73, 64, 104)
-}
-.header
-{
-  width: 100%;
-
-  background-color: rgb(58, 7, 93);
-
-  text-align: center;
-}
-.div_text_center
-{
-  display: inline-block;
-}
-.side_content
-{
-  width: 100%;
-  background-color: rgb(58, 7, 93);
-  
-  text-align: center;
-}
-.menu
-{
-  padding-left: 10%;
-  padding-right: 10%;
-
-  display: inline-block;
-}
-hr
-{
-  background-color: #381441;
-}
-.menu_link
-{
-  background-color: rgb(25, 10, 60);
-  border-radius: 15%;
-  color: rgb(101, 89, 195);
-  text-decoration: none;
-}
-.menu_link:visited
-{
-  background-color: rgb(25, 10, 60);
-  color: rgb(101, 89, 195);
-  font-size: large;
-  text-decoration: none;
-}
-.other_link
-{
-  color: rgb(101, 89, 195);
-  text-decoration: dotted;
-  font-style: oblique 2deg;
-}
-.other_link:visited
-{
-  color: rgb(101, 89, 195);
-  text-decoration: dotted;
-  font-style: oblique 2deg;
-}
 .holder
 {
-  width: 100%;
-  background-color: rgb(58, 7, 93);
+  background-color: var(--alternativeBackgroundColor);
 }
+
 .main_content
 {
   padding-top: 5%;
 
   padding-left: 10%;
   padding-right: 10%;
+
+  padding-bottom: 5%;
+}
+
+.content
+{
+  background-color: var(--backgroundColor);
+}
+.header
+{
+  background-color: var(--alternativeBackgroundColor);
+  text-align: center;
+}
+
+.side_content
+{
+  background-color: var(--alternativeBackgroundColor);
+  text-align: center;
+  padding-top: 1%;
+
+}
+.menu, .div_text_center
+{
+  display: inline-block;
+}
+
+hr
+{
+  border-color: #706174;
+  height: 1px;
+}
+.menu_link
+{
+  background-color: var(--menuBackgroundColor);
+  color: rgb(101, 89, 195);
+  text-decoration: none;
+
+  border-radius: 5%;
+  border: 2px solid var(--menuBackgroundColor);
+}
+
+.other_link
+{
+  color: rgb(101, 89, 195);
+  text-decoration: underline dotted;
 }

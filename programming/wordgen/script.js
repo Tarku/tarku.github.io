@@ -1,9 +1,12 @@
+const SYLLABLE_SEPARATOR = "\n";
+const DEFINITION_SEPARATOR = "\n";
+
 var syllables = []
 var abbrDefinitions = {}
 
 function parseSyllables(code)
 {
-    var separatedSyllables = code.split(";");
+    var separatedSyllables = code.split(SYLLABLE_SEPARATOR);
     syllables = separatedSyllables;
 }
 
@@ -22,16 +25,16 @@ function generateSyllables()
     var random = Math.floor(Math.random() * syllables.length);
     var randomSyllable = syllables[random];
 
-    for(let i of randomSyllable)
+    for(let syl of randomSyllable)
     {
-        if (i == i.toUpperCase())
+        if (syl == syl.toUpperCase())
         {
-            var random2 = Math.floor(Math.random() * abbrDefinitions[i].length);
-            randomSyllable = randomSyllable.replace(i, abbrDefinitions[i][random2])
+            var random2 = Math.floor(Math.random() * abbrDefinitions[syl].length);
+            randomSyllable = randomSyllable.replace(syl, abbrDefinitions[syl][random2])
         } else {
-            randomSyllable = randomSyllable.replace(i, i);
+            randomSyllable = randomSyllable.replace(syl, syl);
         }
-        console.log(i)
+        console.log(syl)
     }
 
     return randomSyllable;
@@ -39,16 +42,19 @@ function generateSyllables()
 
 function main()
 {   
-    var syllableStructure = document.getElementById("syllable_structure").value;
-    var definitions = document.getElementById("syllable_definitions").value;
-    var result = document.getElementById("wordgen_result");
-    var iterationNumber = document.getElementById("iteration_number").value;
+    let syllableStructure = document.querySelector("#syllable_structure").value;
+    let definitions = document.querySelector("#syllable_definitions").value;
 
+    let iterationNumber = document.querySelector("#iteration_number").value;
+    let addNewline = document.querySelector("#output_newline").checked;
+
+    let result = document.querySelector("#wordgen_result");
+    
     result.innerHTML = "";
     
     parseSyllables(syllableStructure);
     
-    var splitDefinitions = definitions.split("\n");
+    var splitDefinitions = definitions.split(DEFINITION_SEPARATOR);
 
 
     for (var defLine in splitDefinitions)
@@ -58,7 +64,9 @@ function main()
 
     for (var i = 0; i < iterationNumber; i++)
     {
-        result.innerHTML += generateSyllables() + "\n";
+        let outputSeparator = addNewline ? "\n" : " ";
+
+        result.innerHTML += generateSyllables() + outputSeparator;
     }
     
 }
