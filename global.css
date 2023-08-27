@@ -69,3 +69,23 @@ hr
   color: rgb(101, 89, 195);
   text-decoration: underline dotted;
 }
+
+figcaption
+{
+  font-size: 0.8em;
+
+  font-style: italic;
+  text-align: center;
+}
+
+img
+{
+  display: block;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 50%;
+
+  border: 4px solid var(--menuBackgroundColor);
+}
