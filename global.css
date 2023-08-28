@@ -4,12 +4,17 @@
   --alternativeBackgroundColor: rgb(58, 7, 93);
   --menuBackgroundColor: rgb(28, 14, 60);
   --textColor: rgb(169, 171, 187);
+
+  --mainFont: 'Franklin Gothic Medium';
+  --altFont: Arial;
 } 
 
 body
 {
   background-color: var(--backgroundColor);
   color: var(--textColor);
+
+  font-family: var(--mainFont), var(--altFont), sans-serif;
 }
 
 .holder
@@ -88,4 +93,12 @@ img
   width: 50%;
 
   border: 4px solid var(--menuBackgroundColor);
+}
+
+.image-table-element
+{
+  width: 100%;
+  height: 200px;
+
+  display: inline-block;
 }
